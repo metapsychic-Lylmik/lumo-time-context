@@ -1,4 +1,4 @@
-Lumo Time Context
+### Lumo Time Context
 
 A browser userscript that adds reliable date and time context to Lumo
 conversations, along with conversation timing and message statistics.
@@ -8,48 +8,53 @@ rather than relying on Lumo to determine the current time. Time-zone
 calculations are performed locally in the browser and do not require an
 external time service.
 
-Features
+### The Lumo Time Context script does not require any external network service to perform its functions. 
+It performs time, date, and time-zone calculations locally in the browser and stores its statistics locally. 
+Any network communication associated with the userscript manager itself—such as optional script update checks 
+or synchronization—is controlled by the userscript manager rather than required by this script.
 
-Adds the current local date and time to Lumo conversations.
+### Features
 
-Numbers messages within a conversation.
+* Adds the current local date and time to Lumo conversations.
 
-Records elapsed time between messages.
+* Numbers messages within a conversation.
 
-Tracks basic conversation timing and message statistics.
+* Records elapsed time between messages.
 
-Keeps conversation timing information available between visits using
+* Tracks basic conversation timing and message statistics.
+
+* Keeps conversation timing information available between visits using
 browser localStorage.
 
-Resolves relative dates such as today, yesterday, and
+* Resolves relative dates such as today, yesterday, and
 tomorrow using the actual current date.
 
-Determines the current date and time for supported cities and time
+* Determines the current date and time for supported cities and time
 zones.
 
-Correctly handles daylight-saving time and date changes between
+* Correctly handles daylight-saving time and date changes between
 locations.
 
-Supports requests involving multiple locations.
+* Supports requests involving multiple locations.
 
-Performs time and date calculations locally in the browser.
+* Performs time and date calculations locally in the browser.
 
-Does not require a connection to an external clock or time API.
+* Does not require a connection to an external clock or time API.
 
-Requirements
+### Requirements
 
-An account with Lumo
+* Does not require an account with Lumo
 
-A modern web browser with JavaScript enabled.
+*  modern web browser with JavaScript enabled.
 
-A userscript manager such as Violentmonkey or Tampermonkey.
+* A userscript manager such as Violentmonkey or Tampermonkey.
 Violentmonkey is recommended for this project.
 
-Browser and Platform Compatibility
+### Browser and Platform Compatibility
 
 The script has been tested on:
 
-Firefox on Linux
+* Firefox on Linux
 
 It may also work on other browsers and operating systems that support a
 compatible userscript manager and the browser features used by the
@@ -57,22 +62,17 @@ script.
 
 Potentially compatible environments include:
 
-Firefox on Windows, macOS, and Linux
+* Firefox on Windows, macOS, and Linux
 
-Chrome on Windows, macOS, and Linux
+* Chrome on Windows, macOS, and Linux
 
-Microsoft Edge on Windows, macOS, and Linux
+* Microsoft Edge on Windows, macOS, and Linux
 
-Chromium-based browsers such as Brave and Vivaldi
+* Chromium-based browsers such as Brave and Vivaldi
 
-Safari on macOS
+* Safari on macOS
 
-Firefox on Android
-
-Other browsers supported by the chosen userscript manager
-
-These platforms are not necessarily tested. Compatibility can also
-depend on the version of Lumo, the browser, and the userscript manager.
+* Firefox on Android
 
 Violentmonkey supports WebExtension-compatible browsers including
 Chrome, Firefox, Edge, Opera, Vivaldi, Brave, and others.
@@ -81,7 +81,7 @@ If you use a browser or platform other than Firefox on Linux, consider
 the installation and compatibility information above as expected
 compatibility, not a tested configuration.
 
-Recommended Userscript Manager
+### Recommended Userscript Manager
 
 Violentmonkey
 
@@ -90,28 +90,28 @@ userscript manager for this project.
 
 There are several reasons for that recommendation:
 
-Open source: Violentmonkey's source code is publicly available
+* Open source: Violentmonkey's source code is publicly available
 on GitHub, allowing its implementation to be inspected and reviewed.
 
-Broad browser support: It works with browsers that support
+* Broad browser support: It works with browsers that support
 WebExtensions, including Firefox, Chrome, Edge, Chromium, Brave,
 Opera, Vivaldi, and others.
 
-Good userscript compatibility: Violentmonkey supports most
+* Good userscript compatibility: Violentmonkey supports most
 scripts written for Greasemonkey and Tampermonkey.
 
-Import and export: Scripts can be imported and exported, making
+* Import and export: Scripts can be imported and exported, making
 it easier to back up or move a userscript collection.
 
-Local control: Scripts are managed directly through the browser
+* Local control: Scripts are managed directly through the browser
 extension, without requiring a separate hosted service for normal
 script installation and use.
 
-No advertising in the extension: Violentmonkey does not contain
+* No advertising in the extension: Violentmonkey does not contain
 advertising, and webpage changes are made by the userscripts the
 user installs.
 
-Public development: The project is maintained publicly on
+* Public development: The project is maintained publicly on
 GitHub, with its source, issues, releases, and development process
 available for inspection.
 
@@ -122,7 +122,7 @@ The recommendation is based primarily on open-source availability,
 browser compatibility, script portability, and user control, rather than
 a claim that other userscript managers are inherently insecure.
 
-Installing Violentmonkey
+### Installing Violentmonkey
 
 Violentmonkey is available through several browser extension stores as
 well as from its GitHub releases.
@@ -132,21 +132,21 @@ website.
 
 After installing Violentmonkey:
 
-Open the Violentmonkey dashboard.
+* Open the Violentmonkey dashboard.
 
-Create a new userscript.
+* Create a new userscript.
 
-Replace the default contents with the contents of the Lumo Time
+* Replace the default contents with the contents of the Lumo Time
 Context .user.js file.
 
-Save the script.
+* Save the script.
 
-Open or reload Lumo.
+* Open or reload Lumo.
 
 The script should then run automatically when its URL matching rules
 match the Lumo page.
 
-Installation with Tampermonkey
+### Installation with Tampermonkey
 
 Tampermonkey is another widely used userscript manager and can also run
 this script.
@@ -154,55 +154,55 @@ this script.
 Install Tampermonkey for your browser,
 then:
 
-Open the Tampermonkey dashboard.
+* Open the Tampermonkey dashboard.
 
-Create a new userscript.
+* Create a new userscript.
 
-Replace the default contents with the contents of the Lumo Time
+* Replace the default contents with the contents of the Lumo Time
 Context .user.js file.
 
-Save the script.
+* Save the script.
 
-Open or reload Lumo.
+* Open or reload Lumo.
 
-Basic Testing
+### Basic Testing
 
 After installation, start a new Lumo conversation and try:
 
-What time is it?
+* What time is it?
 
 The conversation should contain a current-time annotation supplied by
 the userscript.
 
 You can also test another location:
 
-What time is it in London?
+* What time is it in London?
 
 The response should correspond to the current London time, including the
 correct daylight-saving offset when applicable.
 
-Multiple locations
+### Multiple locations
 
 Try:
 
-What time is it in London, Tokyo, and New York?
+* What time is it in London, Tokyo, and New York?
 
 The script should provide current date/time information for each
 recognized location.
 
-Date changes
+### Date changeshttps://github.com/metapsychic-Lylmik/lumo-time-context/blob/main/README.md
 
 A useful test is to request locations that are on opposite sides of the
 International Date Line or otherwise have different calendar dates.
 
 For example:
 
-What time is it in Los Angeles and Tokyo?
+* What time is it in Los Angeles and Tokyo?
 
 The supplied date should change when the local date in the requested
 location differs from the user's local date.
 
-Conversation Timing
+### Conversation Timing
 
 The script adds message numbers to the conversation.
 
@@ -221,7 +221,7 @@ since the preceding message.
 The script also maintains basic conversation timing and message
 statistics.
 
-Relative Dates
+### Relative Dates
 
 The script provides the current date so that relative dates can be
 resolved against the actual date rather than relying on Lumo's
@@ -229,110 +229,35 @@ assumptions.
 
 Examples include:
 
-What day is tomorrow?
+* What day is tomorrow?
 
-What date was yesterday?
+* What date was yesterday?
 
-What date is it today?
+* What date is it today?
 
 This is particularly useful around midnight, when the calendar date
 changes.
 
-Time Zones
+### Time Zones
 
 Time-zone calculations are performed by the browser using its built-in
 internationalization and time-zone support.
 
 This allows the script to account for:
 
-Standard time
+* Standard time
 
-Daylight-saving time
+* Daylight-saving time
 
-Different UTC offsets
+* Different UTC offsets
 
-Calendar-date changes
+* Calendar-date changes
 
-Locations that are currently on different dates
+* Locations that are currently on different dates
 
 No external time server is required.
 
-Supported Locations
-
-The script recognizes a range of commonly requested cities and
-locations, including:
-
-London
-
-Tokyo
-
-Paris
-
-Berlin
-
-Madrid
-
-Rome
-
-Amsterdam
-
-Dublin
-
-Lisbon
-
-Reykjavik
-
-Seoul
-
-Beijing
-
-Shanghai
-
-Hong Kong
-
-Singapore
-
-Bangkok
-
-Delhi
-
-Mumbai
-
-Dubai
-
-Sydney
-
-Melbourne
-
-Perth
-
-Auckland
-
-New York
-
-Chicago
-
-Denver
-
-Los Angeles
-
-San Francisco
-
-Toronto
-
-Vancouver
-
-Mexico City
-
-São Paulo
-
-Buenos Aires
-
-Honolulu
-
-The list can be expanded as needed.
-
-Browser Storage
+### Browser Storage
 
 Conversation timing and message statistics are stored in the browser
 using localStorage.
@@ -347,49 +272,45 @@ also be removed unless Lumo has been excluded from that cleanup.
 The script does not require an external database or account to maintain
 these statistics.
 
-Privacy and Security
+### Privacy and Security
 
-What this script does
+Lumo Time Context is distributed as plain-text JavaScript source code. You can read and inspect the complete script before installing or using it.
 
-The script runs in your browser on the Lumo website. It adds information
-to the Lumo conversation and maintains some conversation statistics
-locally.
+The script is designed to perform its functions locally in your browser. It needs access to the Lumo conversation because that is where it adds time and date context and keeps track of conversation timing.
 
-Time and date calculations are performed locally in the browser. The
-script does not need to contact an external time service to determine
-the current time or convert between time zones.
+The script does **not**:
 
-The message counts, elapsed-time information, and other statistics
-maintained by the script are stored locally in browser storage.
+* Send your conversations or time information to an external server
+* Download or execute additional code
+* Install software on your computer
+* Require an account or external database
+* Collect analytics or usage information
+* Modify or interfere with Lumo's encryption
+* Access Lumo's encryption keys or bypass Lumo's encryption
+* Intercept encrypted network traffic
 
-What the script can access
+Time-zone calculations, elapsed-time calculations, relative-date calculations, and conversation statistics are handled locally by the browser. Conversation statistics are stored using the browser's local storage.
 
-Because this is a userscript running on the Lumo website, it can
-interact with the Lumo page and the information available to JavaScript
-on that page.
+The script operates at the webpage level, after the browser has handled its normal communication with Lumo. It does not interfere with the encryption used for that communication.
 
-That is necessary for the script to observe messages, add time
-information, and maintain conversation state.
+The complete source code is available in this repository, so you can inspect exactly what the script does before installing it.
 
-A userscript should therefore be treated as software with access to the
-pages on which it is allowed to run. Userscript managers themselves can
-also require broad browser permissions because they need to be capable
-of injecting scripts into matching websites.
+These statements describe the current version of the script. If the code changes, review the updated source before installing the new version.
 
-What the script does not need
 
-This script does not need an external time API.
+### What the script does not need
 
-It does not need to send conversation data to a separate server in order
+* This script does not need an external time API.
+
+* It does not need to send conversation data to a separate server in order
 to perform its time-zone calculations.
 
-It does not need an external database to maintain its message
+* It does not need an external database to maintain its message
 statistics.
 
-The absence of an external time service reduces the amount of
-third-party communication required by the script.
+* The absence of an external time service eliminates third-party communication.
 
-Overall risk
+### Overall risk
 
 For this particular script, the additional privacy and security risk is
 relatively small, provided that the source code is trusted and the
@@ -402,14 +323,14 @@ installing them and should only install scripts from sources they trust.
 
 The important distinction is between:
 
-The capabilities available to the userscript manager.
+* The capabilities available to the userscript manager.
 
-What this particular script actually does with those capabilities.
+* What this particular script actually does with those capabilities.
 
-This project is intended to keep the second category as limited as
+* This project is intended to keep the second category as limited as
 practical.
 
-Userscript manager considerations
+### Userscript manager considerations
 
 The userscript manager is separate software from this userscript.
 
@@ -418,15 +339,15 @@ separately from the behavior of this project.
 
 If privacy is a primary concern, review both:
 
-The source code of this userscript.
+* The source code of this userscript.
 
-The permissions and privacy information for the userscript manager
+* The permissions and privacy information for the userscript manager
 you choose.
 
 You can also inspect the browser's developer tools and network activity
 if you want to verify whether a script is making external requests.
 
-How It Works
+### How It Works
 
 The script runs in the Lumo page and observes the conversation as
 messages are entered.
@@ -447,44 +368,44 @@ Conversation state is associated with the individual conversation so
 that message numbering and elapsed-time calculations remain consistent
 within that conversation.
 
-Limitations
+### Limitations
 
-The script supplies date and time information to Lumo; it does not
+* The script supplies date and time information to Lumo; it does not
 control how Lumo chooses to interpret or describe that information.
 
-The list of recognized locations is finite. A location that is not
+* The list of recognized locations is finite. A location that is not
 recognized may not receive a time annotation.
 
-Browser time-zone data and the system clock are used as the basis for
+* Browser time-zone data and the system clock are used as the basis for
 local calculations. An incorrect system clock or outdated browser
 time-zone data can therefore affect the result.
 
 Browser storage behavior is controlled partly by the browser's privacy
 and site-data settings.
 
-Compatibility with browsers and platforms other than the tested
-configuration has not been verified.
+### Compatibility with browsers and platforms other than on Firefox has not been verified.
 
-Troubleshooting
+
+### Troubleshooting
 
 The script does not appear to run
 
 Check that:
 
-The userscript manager is installed and enabled.
+* The userscript manager is installed and enabled.
 
-The Lumo userscript is enabled.
+* The Lumo userscript is enabled.
 
-The script's URL matching rules include the current Lumo page.
+* The script's URL matching rules include the current Lumo page.
 
-The Lumo page has been reloaded after installing or updating the
+* The Lumo page has been reloaded after installing or updating the
 script.
 
-No other userscript is interfering with the page.
+* No other userscript is interfering with the page.
 
-Message counts or timing statistics disappear
+* Message counts or timing statistics disappear
 
-Check the browser's site-data and privacy settings.
+* Check the browser's site-data and privacy settings.
 
 If site data is automatically cleared when the browser closes,
 localStorage data may also be removed unless Lumo has been excluded
@@ -504,45 +425,125 @@ settings.
 The script uses the browser's time and time-zone facilities, so an
 incorrect system clock can produce an incorrect result.
 
-Development
+### Development
 
 The script is a single browser userscript and can be edited directly in
 a userscript manager.
 
 When making changes, test at least:
 
-A new conversation
+* A new conversation
 
-Multiple messages in the same conversation
+* Multiple messages in the same conversation
 
-Message-number increments
+* Message-number increments
 
-Elapsed-time calculations
+* Elapsed-time calculations
 
-A location in the same time zone
+* A location in the same time zone
 
-A location in a different time zone
+* A location in a different time zone
 
-Daylight-saving time
+* Daylight-saving time
 
-A location on a different calendar date
+* A location on a different calendar date
 
-Multiple locations in one request
+* Multiple locations in one request
 
-Browser reloads
+* Browser reloads
 
-New browser sessions
+* New browser sessions
 
-Persistence of localStorage data
+* Persistence of localStorage data
 
-For time-related changes, testing around a local midnight or a time-zone
+* For time-related changes, testing around a local midnight or a time-zone
 date boundary is especially useful.
 
-License
+### Supported Locations beyond your local timezone
 
+The script recognizes a range of commonly requested cities and
+locations, including:
 
+* London
 
-Disclaimer
+* Tokyo
+
+* Paris
+
+* Berlin
+
+* Madrid
+
+* Rome
+
+* Amsterdam
+
+* Dublin
+
+* Lisbon
+
+* Reykjavik
+
+* Seoul
+
+* Beijing
+
+* Shanghai
+
+* Hong Kong
+
+* Singapore
+
+* Bangkok
+
+* Delhi
+
+* Mumbai
+
+* Dubai
+
+* Sydney
+
+* Melbourne
+
+* Perth
+
+* Auckland
+
+* New York
+
+* Chicago
+
+* Denver
+
+* Los Angeles
+
+* San Francisco
+  
+* Toronto
+
+* Vancouver
+
+* Mexico City
+
+* São Paulo
+
+* Buenos Aires
+
+* Honolulu
+
+The list can be expanded as needed.
+
+### License
+
+Lumo Time Context is free and open-source software licensed under the
+GNU General Public License v3.0 (GPL-3.0).
+
+You may use, modify, and redistribute the software under the terms of the
+license. Modified and redistributed versions must remain available under
+the GPLv3 terms.
+
+### Disclaimer
 
 This project is an independent browser userscript and is not affiliated
 with or endorsed by Proton or Lumo.
