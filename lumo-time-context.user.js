@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Lumo Current Date/Time 3.6
+// @name         Lumo Current Date/Time 3.7.1
 // @namespace    lumo-current-time
-// @version      3.6
+// @version      3.7.1
 // @description  Adds local time, conversation context, elapsed time, relative-date resolution, and world-time resolution to Lumo messages
 // @match        https://lumo.proton.me/*
 // @run-at       document-start
@@ -19,6 +19,32 @@
      * This is only used for contextual information when relevant.
      */
     const RETURN_GAP_MS = 30 * 60 * 1000;
+
+    function addMonthsSafely(date, amount) {
+        const result = new Date(date);
+        const originalDay = result.getDate();
+
+        result.setDate(1);
+        result.setMonth(
+            result.getMonth() + amount
+        );
+
+        const lastDayOfMonth =
+            new Date(
+                result.getFullYear(),
+                result.getMonth() + 1,
+                0
+            ).getDate();
+
+        result.setDate(
+            Math.min(
+                originalDay,
+                lastDayOfMonth
+            )
+        );
+
+        return result;
+    }
 
     function getComposer() {
         return document.querySelector(
@@ -649,9 +675,11 @@
             ) {
                 const date = new Date(now);
 
-                date.setMonth(
-                    date.getMonth() + amount
-                );
+                const resolvedDate =
+                    addMonthsSafely(
+                        date,
+                        amount
+                    );
 
                 addReference(
                     'in ' +
@@ -662,7 +690,7 @@
                             ? 'month'
                             : 'months'
                     ),
-                    date
+                    resolvedDate
                 );
             }
         }
@@ -687,9 +715,11 @@
             ) {
                 const date = new Date(now);
 
-                date.setMonth(
-                    date.getMonth() - amount
-                );
+                const resolvedDate =
+                    addMonthsSafely(
+                        date,
+                        -amount
+                    );
 
                 addReference(
                     amount +
@@ -700,7 +730,7 @@
                             : 'months'
                     ) +
                     ' ago',
-                    date
+                    resolvedDate
                 );
             }
         }
@@ -1485,12 +1515,20 @@
         'keydown',
         function (event) {
             if (
-                event.key === 'Enter' &&
-                !event.shiftKey &&
-                !event.isComposing
+                event.key !== 'Enter' ||
+                event.shiftKey ||
+                event.isComposing
             ) {
-                injectTimestamp();
+                return;
             }
+
+            const composer = getComposer();
+
+            if (!composer || event.target !== composer) {
+                return;
+            }
+
+            injectTimestamp();
         },
         true
     );
@@ -1498,6 +1536,6 @@
     monitorNavigation();
 
     console.log(
-        '[Lumo Clock] Version 3.6 loaded'
+        '[Lumo Clock] Version 3.7.1 loaded'
     );
 })();
