@@ -190,7 +190,7 @@ Try:
 The script should provide current date/time information for each
 recognized location.
 
-### Date changeshttps://github.com/metapsychic-Lylmik/lumo-time-context/blob/main/README.md
+### Date changes
 
 A useful test is to request locations that are on opposite sides of the
 International Date Line or otherwise have different calendar dates.
