@@ -23,17 +23,14 @@ or synchronization—is controlled by the userscript manager rather than require
 
 * Tracks basic conversation timing and message statistics.
 
-* Keeps conversation timing information available between visits using
-browser localStorage.
+* Keeps conversation state available when you return to the same Lumo conversation, using browser localStorage.
 
-* Resolves relative dates such as today, yesterday, and
-tomorrow using the actual current date.
+* Resolves relative dates such as today, yesterday, tomorrow, next Sunday, last Monday, in 10 weeks, and 2 months ago using the actual current date.
 
 * Determines the current date and time for supported cities and time
 zones.
 
-* Correctly handles daylight-saving time and date changes between
-locations.
+* Accounts for daylight-saving time and calendar-date changes between locations.
 
 * Supports requests involving multiple locations.
 
@@ -43,7 +40,7 @@ locations.
 
 ### Requirements
 
-* Does not require an account with Lumo
+* Does not require a separate account or external service for the userscript.
 
 *  modern web browser with JavaScript enabled.
 
@@ -106,10 +103,6 @@ it easier to back up or move a userscript collection.
 * Local control: Scripts are managed directly through the browser
 extension, without requiring a separate hosted service for normal
 script installation and use.
-
-* No advertising in the extension: Violentmonkey does not contain
-advertising, and webpage changes are made by the userscripts the
-user installs.
 
 * Public development: The project is maintained publicly on
 GitHub, with its source, issues, releases, and development process
@@ -229,11 +222,10 @@ assumptions.
 
 Examples include:
 
-* What day is tomorrow?
-
-* What date was yesterday?
-
-* What date is it today?
+* What date is next Sunday?
+* What date is 10 days ago?
+* What date is in 2 months?
+* What date was 10 weeks ago?
 
 This is particularly useful around midnight, when the calendar date
 changes.
@@ -247,7 +239,7 @@ This allows the script to account for:
 
 * Standard time
 
-* Daylight-saving time
+* Daylight-savings time
 
 * Different UTC offsets
 
@@ -308,7 +300,7 @@ to perform its time-zone calculations.
 * It does not need an external database to maintain its message
 statistics.
 
-* The absence of an external time service eliminates third-party communication.
+* The script does not make separate network requests to an external time service or other server.
 
 ### Overall risk
 
@@ -403,7 +395,7 @@ script.
 
 * No other userscript is interfering with the page.
 
-* Message counts or timing statistics disappear
+Message counts or timing statistics disappear
 
 * Check the browser's site-data and privacy settings.
 
@@ -459,7 +451,7 @@ When making changes, test at least:
 * For time-related changes, testing around a local midnight or a time-zone
 date boundary is especially useful.
 
-### Supported Locations beyond your local timezone
+### Supported Locations
 
 The script recognizes a range of commonly requested cities and
 locations, including:
