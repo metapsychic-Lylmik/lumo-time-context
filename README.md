@@ -9,15 +9,15 @@ calculations are performed locally in the browser and do not require an
 external time service.
 
 <p align="center">
-  <img width="515" height="165" alt="Screenshot From 2026-09-14 17-24-19" src="https://github.com/user-attachments/assets/9e06f054-efb6-43c7-b3a9-75f1dbb2984d" /><br>
-  <img width="604" height="164" alt="Screenshot From 2026-09-14 17-08-08" src="https://github.com/user-attachments/assets/3f2a16ad-e772-45e5-adcc-5403167d02db" />
+  <img width="345" height="111" alt="Screenshot From 2026-09-14 17-24-19" src="https://github.com/user-attachments/assets/9e06f054-efb6-43c7-b3a9-75f1dbb2984d" />
 </p>
 <p align="center">
-  <img width="430" height="166" alt="Screenshot From 2026-09-14 17-09-06" src="https://github.com/user-attachments/assets/8350fea1-a167-41aa-b9c7-dfba8d271ed7" />
-  <img width="440" height="168" alt="Screenshot From 2026-09-14 17-10-47" src="https://github.com/user-attachments/assets/d6ee551d-e5b9-4392-86ac-b64ef2a7b7d9" />
+  <img width="405" height="110" alt="Screenshot From 2026-09-14 17-08-08" src="https://github.com/user-attachments/assets/3f2a16ad-e772-45e5-adcc-5403167d02db" />
+  <img width="288" height="111" alt="Screenshot From 2026-09-14 17-09-06" src="https://github.com/user-attachments/assets/8350fea1-a167-41aa-b9c7-dfba8d271ed7" />
 </p>
 <p align="center">
-  <img width="445" height="170" alt="Screenshot From 2026-09-14 17-11-16" src="https://github.com/user-attachments/assets/addcb68d-5ce3-47bb-888d-eda151d8b7ee" />
+  <img width="295" height="113" alt="Screenshot From 2026-09-14 17-10-47" src="https://github.com/user-attachments/assets/d6ee551d-e5b9-4392-86ac-b64ef2a7b7d9" />
+  <img width="298" height="114" alt="Screenshot From 2026-09-14 17-11-16" src="https://github.com/user-attachments/assets/addcb68d-5ce3-47bb-888d-eda151d8b7ee" />
 </p>
 
 
