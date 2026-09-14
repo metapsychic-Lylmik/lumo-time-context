@@ -8,6 +8,13 @@ rather than relying on Lumo to determine the current time. Time-zone
 calculations are performed locally in the browser and do not require an
 external time service.
 
+<img width="435" height="152" alt="Screenshot From 2026-09-14 17-07-18" src="https://github.com/user-attachments/assets/cad00d99-cd5d-4e52-8f9f-8e2f07b91722" />
+<img width="663" height="181" alt="Screenshot From 2026-09-14 17-08-08" src="https://github.com/user-attachments/assets/3f2a16ad-e772-45e5-adcc-5403167d02db" />
+<img width="475" height="184" alt="Screenshot From 2026-09-14 17-09-06" src="https://github.com/user-attachments/assets/8350fea1-a167-41aa-b9c7-dfba8d271ed7" />
+<img width="464" height="176" alt="Screenshot From 2026-09-14 17-10-47" src="https://github.com/user-attachments/assets/d6ee551d-e5b9-4392-86ac-b64ef2a7b7d9" />
+<img width="536" height="205" alt="Screenshot From 2026-09-14 17-11-16" src="https://github.com/user-attachments/assets/addcb68d-5ce3-47bb-888d-eda151d8b7ee" />
+
+
 ### The Lumo Time Context script does not require any external network service to perform its functions. 
 It performs time, date, and time-zone calculations locally in the browser and stores its statistics locally. 
 Any network communication associated with the userscript manager itself—such as optional script update checks 
