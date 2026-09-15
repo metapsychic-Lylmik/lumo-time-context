@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Lumo Current Date/Time 3.7.1
+// @name         Lumo Current Date/Time 3.7.2
 // @namespace    lumo-current-time
-// @version      3.7.1
+// @version      3.7.2
 // @description  Adds local time, conversation context, elapsed time, relative-date resolution, and world-time resolution to Lumo messages
 // @match        https://lumo.proton.me/*
 // @run-at       document-start
@@ -1038,7 +1038,7 @@
         const references = [];
 
         /*
-         * How long was I gone?
+         * How long was I away?
          */
         if (
             /\bhow long\b/.test(lower) &&
@@ -1533,9 +1533,50 @@
         true
     );
 
+    /*
+     * =========================================================
+     * Send button click
+     * =========================================================
+     */
+
+    document.addEventListener(
+        'click',
+        function (event) {
+            const target = event.target;
+
+            /*
+             * The send button is a purple circular button
+             * containing an <img alt="Start generating">.
+             * Match the image itself or anything inside
+             * the button that contains it.
+             */
+            const sendImg = target.closest(
+                'img[alt="Start generating"]'
+            );
+
+            if (!sendImg) {
+                const sendButton = target.closest('button');
+
+                if (
+                    sendButton &&
+                    sendButton.querySelector(
+                        'img[alt="Start generating"]'
+                    )
+                ) {
+                    injectTimestamp();
+                }
+
+                return;
+            }
+
+            injectTimestamp();
+        },
+        true
+    );
+
     monitorNavigation();
 
     console.log(
-        '[Lumo Clock] Version 3.7.1 loaded'
+        '[Lumo Clock] Version 3.7.2 loaded'
     );
 })();
