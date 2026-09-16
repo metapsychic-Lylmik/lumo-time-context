@@ -171,6 +171,12 @@ Context .user.js file.
 
 * Open or reload Lumo.
 
+## One-Click Install
+
+If you have Tampermonkey or Violentmonkey installed, click this link to install:
+
+**[Install Lumo Time Context](https://raw.githubusercontent.com/metapsychic-Lylmik/lumo-time-context/main/lumo-time-context.user.js)**
+
 ### Basic Testing
 
 After installation, start a new Lumo conversation and try:
