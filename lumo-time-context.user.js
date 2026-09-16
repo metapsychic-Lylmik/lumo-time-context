@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Lumo Current Date/Time 3.7.2
+// @name         Lumo Time Context
 // @namespace    lumo-current-time
 // @version      3.7.2
 // @description  Adds local time, conversation context, elapsed time, relative-date resolution, and world-time resolution to Lumo messages
@@ -1577,6 +1577,6 @@
     monitorNavigation();
 
     console.log(
-        '[Lumo Clock] Version 3.7.2 loaded'
+        '[Lumo Time Context] Version 3.7.2 loaded'
     );
 })();
