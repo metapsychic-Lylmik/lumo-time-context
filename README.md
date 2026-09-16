@@ -552,13 +552,13 @@ the GPLv3 terms.
 
 ### Disclaimer
 
-This script is created independently and is not affiliated with, endorsed by, or supported by Proton or the Lumo development team.
+This script is created independently and is **not affiliated with, endorsed by, or supported by** Proton or the Lumo development team.
 
 By using this script, you acknowledge that:
 
-    The script is provided as-is without warranty of any kind
-    The author is not responsible for any disruption to your Lumo usage
-    You should review the source code before installing
-    Userscript managers require certain permissions, understand their privacy implications before use
+- The script is provided **as-is** without warranty of any kind
+- The author is not responsible for any disruption to your Lumo usage
+- You should review the source code before installing
+- Userscript managers require certain permissions, understand their privacy implications before use
 
-For official Lumo support, visit Proton Support.
+For official Lumo support, visit [Proton Support](https://proton.me/support/lumo).
