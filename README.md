@@ -569,11 +569,11 @@ The list can be expanded as needed.
 ### License
 
 Lumo Time Context is free and open-source software licensed under the
-GNU General Public License v3.0 (GPL-3.0).
+MIT License.
 
-You may use, modify, and redistribute the software under the terms of the
-license. Modified and redistributed versions must remain available under
-the GPLv3 terms.
+You may use, modify, and redistribute the software, including in
+proprietary derivative works, provided the original copyright notice
+and license text are preserved.
 
 ### Disclaimer
 
