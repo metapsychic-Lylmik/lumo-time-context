@@ -395,6 +395,8 @@ and site-data settings.
 
 The script does not appear to run
 
+* Reload the page to ensure that the script is active
+
 Check that:
 
 * The userscript manager is installed and enabled.
