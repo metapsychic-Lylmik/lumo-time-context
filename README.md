@@ -171,11 +171,30 @@ Context .user.js file.
 
 * Open or reload Lumo.
 
-## One-Click Install
+## Installing the Script
+
+### One-Click Install
 
 If you have Tampermonkey or Violentmonkey installed, click this link to install:
 
 **[Install Lumo Time Context](https://raw.githubusercontent.com/metapsychic-Lylmik/lumo-time-context/main/lumo-time-context.user.js)**
+
+### Standard Installation
+
+1. Open this repository in your browser
+2. Click the `lumo-time-context.user.js` file
+3. Click the **Raw** button to view the script source
+4. Your userscript manager will detect the userscript and offer to install it
+5. Click **Install** to confirm
+6. Navigate to [lumo.proton.me](https://lumo.proton.me) — your messages now carry timestamps
+
+### Manual Installation (if automatic detection fails)
+
+1. Copy all text from the raw script view
+2. Open your userscript manager's dashboard
+3. Create a new userscript
+4. Paste the entire script contents
+5. Save and refresh `lumo.proton.me`
 
 ### Basic Testing
 
