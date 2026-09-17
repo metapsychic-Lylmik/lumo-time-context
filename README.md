@@ -60,36 +60,43 @@ zones.
 * A userscript manager such as Violentmonkey or Tampermonkey.
 Violentmonkey is recommended for this project.
 
-### Browser and Platform Compatibility
+## Browser and Platform Compatibility
 
-The script has been tested on:
+| Browser | Compatible | Notes |
+|---------|:----------:|-------|
+| Chrome | ✅ Yes | Requires userscript manager extension |
+| Edge | ✅ Yes | Requires userscript manager extension |
+| Firefox | ✅ Yes | Violentmonkey, Tampermonkey, or Greasemonkey |
+| Safari | ✅ Yes | Requires userscript manager extension |
+| Brave | ✅ Yes | Requires userscript manager extension |
+| Opera | ✅ Yes | Requires userscript manager extension |
+| iOS / iPadOS Safari | ✅ Yes | Via the [Userscripts](https://apps.apple.com/us/app/id1463298887) app — see iOS Setup below |
+| Android (Edge, Firefox) | ✅ Yes | Via Tampermonkey/Violentmonkey  |
 
-* Firefox on Linux
+> Userscripts operate at the browser level, not the operating system level. Any browser that supports userscript managers can run this script.
 
-It may also work on other browsers and operating systems that support a
-compatible userscript manager and the browser features used by the
-script.
+---
 
-Potentially compatible environments include:
+### iOS / iPadOS Setup (Safari)
 
-* Firefox on Windows, macOS, and Linux
+Safari on iPhone and iPad requires a dedicated userscript manager app. The Userscripts app is currently the viable path:
 
-* Chrome on Windows, macOS, and Linux
+1. Install [Userscripts](https://apps.apple.com/us/app/id1463298887) from the App Store
+2. Open the **Settings** app → **Safari** → **Extensions** → enable **Userscripts**
+3. Grant website permission when prompted (allows it to run on `lumo.proton.me`)
+4. Navigate to the One-Click Install link above in Safari
+5. Tap the **Extensions button** (puzzle-piece icon, top left of the Safari window)
+6. Select **Userscripts** — this opens the install dialog for the script
+7. Tap **Install** to confirm
 
-* Microsoft Edge on Windows, macOS, and Linux
+Once installed, the script works identically to the desktop version. Both scripts have been confirmed working on iPhone and iPad through this method.
 
-* Chromium-based browsers such as Brave and Vivaldi
+**Alternative:** Tampermonkey is not available for iOS Safari; the Userscripts app is the supported solution for Apple mobile devices.
 
-* Safari on macOS
+---
 
-* Firefox on Android
+### Desktop Installs - Windows, Linux
 
-Violentmonkey supports WebExtension-compatible browsers including
-Chrome, Firefox, Edge, Opera, Vivaldi, Brave, and others.
-
-If you use a browser or platform other than Firefox on Linux, consider
-the installation and compatibility information above as expected
-compatibility, not a tested configuration.
 
 ### Recommended Userscript Manager
 
